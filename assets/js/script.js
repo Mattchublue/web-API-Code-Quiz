@@ -13,7 +13,7 @@ var quizQuestions = [
 const startButton = document.getElementById('start-btn')
 
 startButton.addEventListener('click', startGame)
-var questionContainter=document.querySelector("#question-container")
+var questionContainer=document.querySelector("#question-container")
 var questionTitle=document.querySelector("#question")
 var answerChoices=document.querySelector("#answer-buttons")
 var timerDisplay=document.querySelector("#timer-display")
@@ -21,7 +21,10 @@ var timerState;
 var initialTime=60;
 var indexQuestion=0;
 var endScreen=document.querySelector("#end-screen");
-
+var finalscore=document.querySelector("#final-score")
+var initials=document.querySelector("#initials")
+var submitBtn=document.querySelector("#submitBtn")
+var scoreList=document.querySelector("#score-list")
 function startGame() {
     startButton.setAttribute("class", "hide")
     console.log('Started')
@@ -32,7 +35,7 @@ if (initialTime<=0){
     endGame()
 }
 },1000)
-questionContainter.removeAttribute("class")
+questionContainer.removeAttribute("class")
 setNextQuestion()
 }
 
@@ -65,7 +68,33 @@ else {setNextQuestion()}
 }
 
 function endGame() {
-  questionContainter.setAttribute("class", "hide")
+  questionContainer.setAttribute("class", "hide")
   endScreen.removeAttribute("class")
   clearInterval(timerState)  
+  finalscore.textContent=initialTime
 }
+
+function saveScore() {
+    var scoreArray=JSON.parse(localStorage.getItem("scores"))||[]
+    var newScores={name:initials.value, score:initialTime}
+    scoreArray.push(newScores)
+    localStorage.setItem("scores", JSON.stringify(scoreArray))
+    showScores()   
+}
+
+function showScores() {
+    var scoreArray=JSON.parse(localStorage.getItem("scores"))||[]
+    scoreArray.sort(function(a,b){
+    return b.score-a.score    
+    //if (b.score>a.score){return 1}
+    //elseif(b.score)<a.score{return -1}
+    })
+    scoreArray.forEach(function(object){
+    var scoreObject=document.createElement("li")
+    scoreObject.textContent="name: "+object.name+"-- score : "+object.score
+    scoreList.appendChild(scoreObject)
+}
+        
+        )
+}
+    submitBtn.onclick=saveScore
