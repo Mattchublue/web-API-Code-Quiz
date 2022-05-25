@@ -1,14 +1,47 @@
 var quizQuestions = [
     {
       title: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
+      choices: ["booleans", "strings", "alerts", "numbers"],
       answer: "alerts"
     },
     {
-      title: "The condition in an if / else statement is enclosed within ____.",
-      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-      answer: "parentheses"
-    }
+      title: "Javascript is put inside the following HTML element:",
+      choices: ["<js>", "<scripting>", "<script>", "<js>"],
+      answer: "<script>"
+    },
+    {
+        title: "Where should you insert JavaScript?",
+        choices: ["In the <head> section", "In the <body> section", "In either the <head> or the <body>"],
+        answer: "In either the <head> or the <body>"
+      },
+      {
+        title: "Which event occurs when a user clicks on an HTML element?",
+        choices: ["onclick", "onmouseclick", "onchange", "onchange"],
+        answer: "onclick"
+      },
+      {
+        title: "Which operator is used to assign a value to a variable?",
+        choices: ["X", "-", "<", "="],
+        answer: "="
+      },
+      {
+        title: "How do you create a function in Javascript?",
+        choices: ["function:myFunction()  ", "function = myFunction()", "In either the <head> or the <body>"],
+        answer: "In either the <head> or the <body>"
+      },
+      {
+        title: "In JavaScript does casing matter?",
+        choices: ["Sometimes", "Yes", "No"],
+        answer: "Yes"
+      },
+      {
+        title: "Which of the following is an example of a declaration of a JavaScript variable?",
+        choices: ["v petName", "var petName", "variable petName"],
+        answer: "var petName"
+      },
+    
+    
+
     ]
 const startButton = document.getElementById('start-btn')
 

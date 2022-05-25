@@ -4,14 +4,12 @@
 }
 
 :root {
-    --hue-neutral: 200;
+    --hue-neutral: 25;
     --hue-incorrect: 0;
     --hue-right: 145;
 }
 
-
 body {
-    --hue: var(--hue-neutral);
     padding: 0;
     margin: 0;
     display: flex;
@@ -19,14 +17,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: hsl(var(--hue), 100%, 20%);
-}
-
-body.right {
-    --hue: var(--hue-right);
-}
-body.incorrect {
-    --hue: var(--hue-incorrect);
+    background-color: rgb(76, 76, 187)
 }
 
 .container {
@@ -34,8 +25,6 @@ body.incorrect {
     max-width: 80%;
     background-color: white;
     border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 7.5px 3px;
 }
 
 .btn-grid {
@@ -57,28 +46,12 @@ body.incorrect {
     border-color: fuchsia;
 }    
 
-.btn.right {
-    --hue: var(--hue-right);
-    color: black;
-
-}
-
-.btn.incorrect {
-    --hue: var(--hue-incorrect);
-
-}
-
 .start-btn {
     font-size: 1.75rem;
     font-weight: bolder;
     padding: 10px 20px;
 }
 
-.begin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .hide {
     display: none;
 }
