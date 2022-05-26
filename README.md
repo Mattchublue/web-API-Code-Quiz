@@ -1,15 +1,12 @@
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
+Password Generator
+This application is a JavaScript code quiz that is timed.  The score is determined based on the amount of the time that is remaining when the quiz is completed.  There is an option to enter your initials at the end of the game and the high scores are sorted from highest to lowest.
 
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
+Instructions
+Click the Start button and answer the questions.  At the end of the game enter your initials to determine how you scored
+
+Application Image
+<img width="1142" alt="Screen Shot 2022-05-25 at 6 03 59 PM" src="https://user-images.githubusercontent.com/100176161/170389072-6b338211-66a4-4052-a590-d2451ca9b643.png">
+
+<img width="1149" alt="Screen Shot 2022-05-25 at 6 12 32 PM" src="https://user-images.githubusercontent.com/100176161/170389537-f45b88f9-8bb0-412a-af2a-5b4d3a588bb8.png">
+
+Application URL
